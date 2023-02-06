@@ -6,37 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./vue.js"></script>
     <title>Basic Vue App</title>
+    <style>
+        .verde{
+            color:green;
+        }
+    </style>
 </head>
 <body>
 
     <div id="app">
-        {{ mensagem }}
+        <a v-bind:href="site">Site</a>
+        <p v-bind:class="cor">Entendendo a diretiva v-bind</p>
+        <input type="text">
+        <input type="checkbox">
     </div>
 
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                mensagem: 'Primeiro template controlado pelo Vue.',
-                valor_total: 150.47,
-                logado: false,
-                hobbies: [
-                    'Dormir',
-                    'Colecionar videogames antigos'
-                ],
-                perfil: {
-                    nome: 'Lucas',
-                    site: 'lucas.ferrari@email.com',
-                    idade: 32,
-                    cursos: [
-                        { nome: 'Laravel', carga_horaria: 50 },
-                        { nome: 'Rocketseat', carga_horaria: 70 }
-                    ]
-                }
+                site: 'https://jorgesantana.net.br',
+                cor: 'verde'
             },
-            methods: {
-
-            }
+            methods: {}
         })
     </script>
 </body>
