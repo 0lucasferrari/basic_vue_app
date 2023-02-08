@@ -15,10 +15,8 @@
 <body>
 
     <div id="app">
-        <a v-bind:href="site">Site</a>
-        <p v-bind:class="cor">Entendendo a diretiva v-bind</p>
-        <input type="text">
-        <input type="checkbox">
+        <input type="text" @keyup="printText()">
+        <button @click="msg()">Click me!</button>
     </div>
 
     <script>
@@ -28,7 +26,14 @@
                 site: 'https://jorgesantana.net.br',
                 cor: 'verde'
             },
-            methods: {}
+            methods: {
+                printText() {
+                    console.log('Teste')
+                },
+                msg () {
+                    alert('Hi!')
+                }
+            }
         })
     </script>
 </body>
