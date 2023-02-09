@@ -15,25 +15,16 @@
 <body>
 
     <div id="app">
-        <input type="text" @keyup="printText()">
-        <button @click="msg()">Click me!</button>
+        <div v-text="exampleText">Texto de exemplo</div>
     </div>
 
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                site: 'https://jorgesantana.net.br',
-                cor: 'verde'
+                exampleText: 'Hi, this is an example text!'
             },
-            methods: {
-                printText() {
-                    console.log('Teste')
-                },
-                msg () {
-                    alert('Hi!')
-                }
-            }
+            methods: {}
         })
     </script>
 </body>
