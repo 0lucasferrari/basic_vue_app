@@ -15,18 +15,22 @@
 <body>
 
     <div id="app">
-        <ul>
-            <li v-for="n in 10"> {{ n }} </li>
-        </ul>
+        {{ paciente }} <br>
+        <!-- <input type="text" :value="paciente" @keyup="setPaciente($event)"> -->
+        <input type="text" v-model="paciente">
     </div>
 
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                exampleText: 'Hi, this is an example text!'
+                paciente: 'João da Silva'
             },
-            methods: {}
+            methods: {
+                setPaciente(e) {
+                    this.paciente = e.target.value
+                }
+            }
         })
     </script>
 </body>
